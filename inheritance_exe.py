@@ -93,3 +93,21 @@ ana.compete()
 ben=Swimmer("ben",12,"butterfly")
 ben.warm_up()
 ben.compete()
+
+#mission 6
+class Athleth:
+    def __init__(self,name,age,years_active):
+        self.name=name
+        self.age=age
+        self.years_active=years_active
+    def experince(self):
+        print(f"{self.name} has been active for {self.years_active} years")
+class Teamsportplayer(Athleth):
+    def __init__(self, name, age, years_active,team_name):
+        super().__init__(name, age, years_active)
+        self.team_name=team_name
+    def team_info(self):
+        print(f"{self.name} plays for {self.team_name}")
+gal=Teamsportplayer("gal",28,10,"real madrid")
+gal.experince()
+gal.team_info()
