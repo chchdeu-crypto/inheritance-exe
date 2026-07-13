@@ -67,3 +67,29 @@ jan=Cyclist("jan","france","road")
 lior.greet()
 avi.greet()
 jan.greet()
+
+#mission 5
+class Athleth:
+    def __init__(self,name,age):
+        self.name=name
+        self.age=age
+    def warm_up(self):
+        print(f"{self.name} is warming up")
+class Gymnast(Athleth):
+    def __init__(self, name, age,apparatus):
+        super().__init__(name, age)
+        self.apparatus=apparatus
+    def compete(self):
+        print(f"{self.name} competes on the {self.apparatus}")
+class Swimmer(Athleth):
+    def __init__(self, name, age,stroke):
+        super().__init__(name, age)
+        self.storke=stroke
+    def compete(self):
+        print(f"{self.name} competes in {self.storke}")
+ana=Gymnast("ana",19,"rings")
+ana.warm_up()
+ana.compete()
+ben=Swimmer("ben",12,"butterfly")
+ben.warm_up()
+ben.compete()
