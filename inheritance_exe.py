@@ -159,3 +159,25 @@ dan.train()
 dan.train()
 print(dan.sessions_neened(10))
 dan.describe()
+
+#mission 9
+class Athleth:
+    def __init__(self,name,age,position):
+        self.name=name
+        self.age=age
+        self.position=position
+    def player_card(self):
+        print(f"name; {self.name}, age:{self.age}, position:{self.position}")
+class Basketballplayer(Athleth):
+    def __init__(self, name, age, position,jersey_number):
+        super().__init__(name, age, position)
+        self.jersey_number=jersey_number
+    def full_profile(self):
+        self.player_card()
+        print(f"jersey: #{self.jersey_number}")
+chaim=Basketballplayer("cahim",22,"center",11)
+yossi=Basketballplayer("yossi",24,"shooting",19)
+lebron=Basketballplayer("lebron",35,"pg",77)
+chaim.full_profile()
+yossi.full_profile()
+lebron.full_profile()
