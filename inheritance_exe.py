@@ -132,3 +132,30 @@ usain.set_record(12.5)
 print(usain.has_record())
 print(usain.personal_best)
         
+#mission 8
+class Athleth:
+    def __init__(self,name,age):
+        self.name=name
+        self.age=age
+        self.sessions_completed=0
+    def train(self):
+        self.sessions_completed+=1
+    def sessions_neened(self,target):
+        if target-self.sessions_completed>0:
+            return target-self.sessions_completed
+        else:
+            return 0
+class Triathlete(Athleth):
+    def __init__(self, name, age,discipline):
+        super().__init__(name, age)
+        self.discipline=discipline
+    def describe(self):
+        print(f"Triathlete {self.name}, age {self.age}, discipline:{self.discipline}")
+dan=Triathlete("dan",26,"cycling")
+dan.train()
+dan.train()
+dan.train()
+dan.train()
+dan.train()
+print(dan.sessions_neened(10))
+dan.describe()
