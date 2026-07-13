@@ -111,3 +111,24 @@ class Teamsportplayer(Athleth):
 gal=Teamsportplayer("gal",28,10,"real madrid")
 gal.experince()
 gal.team_info()
+
+#mission 7
+class Athleth:
+    def __init__(self,name,sport):
+        self.name=name
+        self.sport=sport
+        self.personal_best=None
+    def set_record(self,value):
+        self.personal_best=value
+        print("update succsefully")
+    def has_record(self):
+        return self.personal_best!=None
+class sprinter(Athleth):
+    def __init__(self, name,):
+        super().__init__(name, "100m sprint")
+usain=sprinter("usain")
+print(usain.has_record())
+usain.set_record(12.5)
+print(usain.has_record())
+print(usain.personal_best)
+        
