@@ -181,3 +181,28 @@ lebron=Basketballplayer("lebron",35,"pg",77)
 chaim.full_profile()
 yossi.full_profile()
 lebron.full_profile()
+
+#mission 10
+class person:
+    def __init__(self,name,age):
+        self.name=name
+        self.age=age
+    def greet(self):
+        print(f"hi i am {self.name}")
+
+class Athleth(person):
+    def __init__(self, name, age,sport):
+        super().__init__(name, age)
+        self.sport=sport
+    def train(self):
+        print(f"{self.name} is training for {self.sport}")
+class ProfssionalAthleth(Athleth):
+    def __init__(self, name, age, sport,sponsor):
+        super().__init__(name, age, sport)
+        self.sponsor=sponsor
+    def sponsor_info(self):
+        print(f"{self.name} is sponsored by {self.sponsor}")
+cr7=ProfssionalAthleth("ronaldo",41,"fotball","adidas")
+cr7.greet()
+cr7.train()
+cr7.sponsor_info()
