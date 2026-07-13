@@ -24,3 +24,20 @@ class Runner(Athleth):
         super().__init__(name, age, "running")
 sara=Runner("sara",25)
 sara.describe()
+
+#mission 3
+class Athleth:
+    def __init__(self,name,age):
+        self.name=name
+        self.age=age
+    def introduce(self):
+        print(f"{self.name} is {self.age} years old and is an athleth")   
+class Cyclist(Athleth):
+    def __init__(self, name, age,bike_brand):
+        super().__init__(name, age)
+        self.bike_brand=bike_brand
+    def discribe_gear(self):
+        print(f"cyclist {self.name} rides a {self.bike_brand}")
+rider1=Cyclist("chaim",22,"trek")
+rider1.introduce()
+rider1.discribe_gear()
